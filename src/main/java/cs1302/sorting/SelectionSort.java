@@ -1,5 +1,7 @@
 package cs1302.sorting;
 
+/** class to sort by selection*/
+
 public class SelectionSort {
 
     public static void main(String[] args) {
