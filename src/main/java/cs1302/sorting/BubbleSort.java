@@ -1,13 +1,21 @@
 package cs1302.sorting;
 
 import java.util.Comparator;
+import java.util.Arrays;
 
 /** Class to sort using BubbleSort. */
 
 public class BubbleSort {
     public static void main (String[] args) {
-        System.out.println("Not yet implemented");
-    }
+	Integer[] yeah = {6,1,10,44,9,2};
+	System.out.println(Arrays.toString(yeah));
+	BubbleSort.bubble(yeah, 0, 5, Integer::compareTo);
+	System.out.println(Arrays.toString(yeah));
+	String[] ohYeah = {"asdf","e","ssf","","atatat"};
+	System.out.println(Arrays.toString(ohYeah));
+	BubbleSort.bubble(ohYeah, 2, 4, (o,t) -> o.length() - t.length());
+	System.out.println(Arrays.toString(ohYeah));
+    } // main
 
     public static <T> void bubble(T[] array, int lo, int hi, Comparator<T> c) {
 	for (int i = lo ; i < hi ; i ++) {
@@ -18,4 +26,5 @@ public class BubbleSort {
 	    } // if
 	} // for
     } // bubble
+
 }
