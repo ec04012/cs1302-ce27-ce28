@@ -15,13 +15,12 @@ public class BubbleSort {
 	//System.out.println(Arrays.toString(ohYeah));
 	//BubbleSort.bubble(ohYeah, 2, 4, (o,t) -> o.length() - t.length());
 	//System.out.println(Arrays.toString(ohYeah));
-    System.out.println(Arrays.toString(yeah));
-    BubbleSort.bubbleSort(yeah , 0 , 5 , Integer::compareTo);
-    System.out.println(Arrays.toString(yeah));
-    System.out.println(Arrays.toString(ohYeah));
-    BubbleSort.bubbleSort(ohYeah , 0 , 4 ,(o , t) -> o.length() - t.length());
-    System.out.println(Arrays.toString(ohYeah));
-
+	System.out.println(Arrays.toString(yeah));
+	BubbleSort.bubbleSort(yeah , 0 , 5 , Integer::compareTo);
+	System.out.println(Arrays.toString(yeah));
+	System.out.println(Arrays.toString(ohYeah));
+	BubbleSort.bubbleSort(ohYeah , 0 , 4 ,(o , t) -> o.length() - t.length());
+	System.out.println(Arrays.toString(ohYeah));
     } // main
 
     public static <T> void bubble(T[] array, int lo, int hi, Comparator<T> c) {

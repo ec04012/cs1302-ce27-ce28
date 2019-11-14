@@ -11,13 +11,13 @@ public class SelectionSort {
         String[]  strArray = {"wasd", "a", "fgyia", "cy", "bhy"};
 
         System.out.println(Arrays.toString(intArray));
-        selectMin(intArray, 0, intArray.length - 1, Integer::compareTo);
+        selectionSort(intArray, 0, intArray.length - 1, Integer::compareTo);
         System.out.println(Arrays.toString(intArray));
 
         System.out.println("");
 
         System.out.println(Arrays.toString(strArray));
-        selectMin(strArray, 2, strArray.length - 1, (a, b) -> a.length() - b.length());
+        selectionSort(strArray, 0, 3, (a, b) -> a.length() - b.length());
         System.out.println(Arrays.toString(strArray));
     } // main
 
@@ -36,5 +36,12 @@ public class SelectionSort {
         temp = array[lowIndex];
         array[lowIndex] = array[lo];
         array[lo] = temp;
-    }
+    } // SelectMin
+
+    public static <T> void selectionSort(T[] array, int lo, int hi, Comparator<T> c) {
+	for (int i = lo ; i < hi ; i ++ ) {
+	    selectMin(array, i , hi , c);
+	} // for
+    } // selectionSort
+    
 } // SelectionSort
