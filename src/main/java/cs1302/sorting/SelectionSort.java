@@ -25,6 +25,20 @@ public class SelectionSort {
         System.out.println(newPivot);
     } // main
 
+    /**
+     * Swaps the objects at the specified indices of the specified array.
+     * @param array the array to perform the swap on.
+     * @param a the index of the first object to swap.
+     * @param b the index of the second object to swap.
+     * @throw IndexOutOfBoundsException if either index is out of bounds of the specified array.
+     */
+    private static <T> void swap (T[] array, int a, int b) {
+        T temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
+
+
     public static <T> void selectMin(T[] array, int lo, int hi, Comparator<T> c) {
         T temp;
         int lowIndex = lo;
